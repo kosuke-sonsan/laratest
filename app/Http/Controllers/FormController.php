@@ -16,8 +16,17 @@ class FormController extends Controller
         ];
         return view('index', $items);
     }
+    public function store(PostRequest $request)
+    {
+        Post::create([
+            'name' => $request->name,
+            'email' => $request->email
+        ]);
+        return redirect()->route('post.index');
+    }
     public function thanksindex()
     {
         return view('Thanks');
     }
 }
+

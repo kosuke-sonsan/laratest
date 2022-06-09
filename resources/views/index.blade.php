@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="/thanks" method="get">
+  <form action="/thanks" method="post">
     @csrf
     {{$content}}<br>
     <input type="text" name="name"><br>
